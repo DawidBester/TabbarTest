@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabbarTest.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TabbarTest"
+    Title="TabbarTest"
+    NavBarIsVisible="False"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <!--<Tab Title="Page1">
+            <ShellContent ContentTemplate="{DataTemplate local:Page1}" />
+        </Tab>-->
+        <Tab Title="Page2A">
+            <ShellContent Title="Page2A" ContentTemplate="{DataTemplate local:Page2}" />
+        </Tab>
+        <Tab Title="Page2B">
+            <ShellContent Title="Page2B" ContentTemplate="{DataTemplate local:Page2}" />
+        </Tab>
+        <!--<Tab Title="Page3">
+            <ShellContent ContentTemplate="{DataTemplate local:Page3}" />
+        </Tab>-->
+
+    </TabBar>
+
+</Shell>

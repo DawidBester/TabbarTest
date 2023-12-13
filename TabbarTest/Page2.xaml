@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TabbarTest.Page2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="TabbarContentPage"
+    Title="Page2"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <Grid
+        HorizontalOptions="Fill"
+        RowDefinitions="Auto,*"
+        VerticalOptions="Fill">
+        <Grid
+            Grid.Row="0"
+            BackgroundColor="Black"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+            <Label
+                HorizontalOptions="Center"
+                Text="Page2 Title"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </Grid>
+
+        <!--  This is the content of the page 2A  -->
+        <Grid
+            x:Name="Page2AGrid"
+            Grid.Row="1"
+            BackgroundColor="LightBlue"
+            HorizontalOptions="Fill"
+            RowDefinitions="*,*,*"
+            VerticalOptions="Fill">
+            <Label
+                Grid.Row="0"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Page2A"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                BackgroundColor="LightCoral"
+                BindingContext="{x:Reference TabbarContentPage}"
+                FontSize="20"
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Counter}"
+                TextColor="Black"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+            <Button
+                Grid.Row="2"
+                BackgroundColor="SteelBlue"
+                Clicked="Button_OnClicked"
+                HorizontalOptions="Center"
+                Text="Add Count"
+                TextColor="WhiteSmoke"
+                VerticalOptions="Center" />
+        </Grid>
+
+        <!--  This is the content of the page 2B  -->
+        <Grid
+            x:Name="Page2BGrid"
+            Grid.Row="1"
+            BackgroundColor="LightCoral"
+            HorizontalOptions="Fill"
+            RowDefinitions="*,*,*"
+            VerticalOptions="Fill">
+            <Label
+                Grid.Row="0"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Page2B"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                BackgroundColor="LightBlue"
+                BindingContext="{x:Reference TabbarContentPage}"
+                FontSize="20"
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Counter}"
+                TextColor="Black"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+            <Button
+                Grid.Row="2"
+                BackgroundColor="SteelBlue"
+                Clicked="Button_OnClicked"
+                HorizontalOptions="Center"
+                Text="Add Count"
+                TextColor="WhiteSmoke"
+                VerticalOptions="Center" />
+        </Grid>
+
+    </Grid>
+</ContentPage>
